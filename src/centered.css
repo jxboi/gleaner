@@ -558,18 +558,33 @@
   font-size: 18px;
   letter-spacing: -0.3px;
 }
-/* Projects on Home are compact rows: name, next step, progress. */
+/* Projects on Home are compact rows: name, next step, progress. They sit on
+   the page itself, so the composer stays the only raised surface. The list
+   bleeds 10px each side so row content lines up with the heading while the
+   hover tint keeps some breathing room. */
 .project-list {
   list-style: none;
-  margin: 0;
+  margin: 0 -10px;
   padding: 0;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
 }
-.project-list li + li {
-  border-top: 1px solid #ecede7;
+.project-list li {
+  position: relative;
+}
+.project-list li + li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  border-top: 1px solid #e6e7e0;
+  transition: opacity 0.15s;
+}
+/* Hide the dividers touching a hovered or focused row so it reads as one shape. */
+.project-list li:hover::before,
+.project-list li:hover + li::before,
+.project-list li:has(:focus-visible)::before,
+.project-list li:has(:focus-visible) + li::before {
+  opacity: 0;
 }
 .project-row {
   display: flex;
@@ -577,8 +592,9 @@
   gap: 14px;
   width: 100%;
   min-height: 64px;
-  padding: 11px 16px 11px 18px;
+  padding: 11px 10px;
   border: 0;
+  border-radius: 10px;
   background: transparent;
   color: inherit;
   font: inherit;
@@ -587,7 +603,7 @@
   transition: background-color 0.15s;
 }
 .project-row:hover {
-  background: #fafaf6;
+  background: #eeefe8;
 }
 .project-row:focus-visible {
   outline: 2px solid var(--green);
@@ -718,7 +734,7 @@
   }
   .project-row {
     gap: 12px;
-    padding: 10px 12px 10px 14px;
+    padding: 10px;
   }
   .project-row-progress .progress-track {
     display: none;
