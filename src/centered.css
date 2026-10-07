@@ -93,10 +93,6 @@
   font-weight: 400;
   letter-spacing: -1.35px;
 }
-.welcome-description {
-  font-size: 15px;
-  margin-top: 12px;
-}
 .home-layout {
   display: block;
 }
@@ -273,9 +269,6 @@
     width: 47px;
     height: 47px;
   }
-  .welcome-description {
-    font-size: 16px;
-  }
   .welcome-date {
     font-size: 14px;
   }
@@ -354,11 +347,6 @@
     max-width: 100%;
     letter-spacing: -1.1px;
   }
-  .welcome-description {
-    font-size: 13px;
-    max-width: 100%;
-    margin-top: 11px;
-  }
   .welcome-date {
     margin-bottom: 15px;
     font-size: 12px;
@@ -431,11 +419,6 @@
     max-width: 315px;
     margin: auto;
     line-height: 1.25;
-  }
-  .welcome-description {
-    max-width: 280px;
-    margin: 12px auto 0;
-    line-height: 1.6;
   }
   .welcome-date {
     font-size: 11px;

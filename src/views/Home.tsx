@@ -12,9 +12,6 @@ export function Home(props: WorkspaceProps) {
         <div>
           <p className="welcome-date">{formatWorkspaceDate(TODAY)}</p>
           <h1>A little clarity for your day, {data.name}.</h1>
-          <p className="welcome-description">
-            Your ideas, plans, and next steps. All in one place.
-          </p>
         </div>
       </section>
       <div className="home-layout">

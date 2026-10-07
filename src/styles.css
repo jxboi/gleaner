@@ -300,12 +300,6 @@ kbd {
   letter-spacing: -1.5px;
   color: #212821;
 }
-.welcome-description {
-  margin-top: 8px;
-  color: #7c8179;
-  font-size: 19px;
-  letter-spacing: -0.2px;
-}
 .button {
   display: inline-flex;
   align-items: center;
@@ -1521,9 +1515,6 @@ kbd {
   .welcome-row h1 {
     font-size: 34px;
   }
-  .welcome-description {
-    font-size: 16px;
-  }
   .project-card {
     padding: 14px 14px 17px;
   }
@@ -1734,12 +1725,6 @@ kbd {
     line-height: 1.25;
     letter-spacing: -1.1px;
     max-width: 480px;
-  }
-  .welcome-description {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-top: 11px;
-    max-width: 300px;
   }
   .quick-add {
     position: absolute;
@@ -1954,9 +1939,6 @@ kbd {
   .welcome-row h1 {
     font-size: 31px;
     max-width: 300px;
-  }
-  .welcome-description {
-    max-width: 290px;
   }
   .project-grid {
     grid-template-columns: 1fr;
