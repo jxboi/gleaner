@@ -551,12 +551,23 @@
   max-width: 720px; /* same axis as the composer */
   margin-top: 72px;
 }
+/* A small sans label, not a headline: Lora is left to the welcome heading. */
 .home-main .section-heading {
-  margin-bottom: 14px;
+  margin-bottom: 6px;
 }
 .home-main .section-heading h2 {
-  font-size: 18px;
-  letter-spacing: -0.3px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #6b7166;
+}
+.home-main .section-heading > .text-button {
+  font-size: 13px;
+  color: #6b7166;
+}
+.home-main .section-heading > .text-button:hover {
+  color: var(--green);
 }
 /* Projects on Home are compact rows: name, next step, progress. They sit on
    the page itself, so the composer stays the only raised surface. The list
@@ -633,10 +644,8 @@
   text-overflow: ellipsis;
 }
 .project-row-text strong {
-  font-family: "Lora", Georgia, serif;
-  font-size: 16px;
+  font-size: 14.5px;
   font-weight: 500;
-  letter-spacing: -0.2px;
   color: var(--ink);
 }
 .project-row-text span {
