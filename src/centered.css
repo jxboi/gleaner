@@ -1,0 +1,650 @@
+/* One quiet, centered place to work. Secondary tools are revealed on demand. */
+.home-main > .assistant-card {
+  max-width: 936px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.assistant-card .assistant-composer textarea {
+  min-height: 96px;
+  font-size: 15px;
+  resize: none;
+}
+.assistant-card .assistant-composer-footer {
+  min-height: 45px;
+}
+.assistant-card .assistant-send {
+  width: 44px;
+  height: 44px;
+  border-radius: 9px;
+}
+.assistant-card .assistant-add-context {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #dedfd7;
+  border-radius: 9px;
+  color: #5e6859;
+  font-size: 13px;
+  gap: 7px;
+}
+.assistant-card .assistant-add-context:hover {
+  background: #f3f5ef;
+}
+.assistant-card .assistant-suggestions {
+  margin-top: 21px;
+  gap: 15px;
+}
+.assistant-card .assistant-suggestions button {
+  min-height: 51px;
+  font-size: 13px;
+}
+.header-inner {
+  max-width: 1120px;
+  padding: 0 24px;
+}
+.app-header {
+  height: 90px;
+}
+.header-actions {
+  gap: 12px;
+}
+.search-trigger {
+  padding: 7px;
+}
+.main-nav button {
+  font-size: 14px;
+  padding: 10px 17px;
+}
+.brand span {
+  font-size: 28px;
+}
+.brand svg {
+  width: 31px;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 11px;
+}
+.notification-trigger .unread-dot {
+  width: 5px;
+  height: 5px;
+  right: 6px;
+  top: 3px;
+}
+.app-main {
+  max-width: 1070px;
+  padding: 48px 24px 55px;
+  min-height: calc(100dvh - 90px);
+}
+.app-main:focus {
+  outline: none;
+}
+.welcome-row {
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 35px;
+}
+.welcome-date {
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.welcome-row h1 {
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -1.35px;
+}
+.welcome-description {
+  font-size: 15px;
+  margin-top: 12px;
+}
+.home-layout {
+  display: block;
+}
+.home-main {
+  width: 100%;
+}
+.home-main > .assistant-card {
+  max-width: 936px;
+  margin: 0 auto;
+}
+.projects-section {
+  margin: 37px auto 0;
+}
+.section-heading h2 {
+  font-size: 25px;
+}
+.section-heading p {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.section-heading > .text-button {
+  font-size: 13px;
+}
+.section-heading {
+  margin-bottom: 19px;
+}
+.project-grid {
+  gap: 18px;
+}
+/* Flex column, not block: a <button> vertically centers block content, so cards
+   stretched to a shared row height would float their content off the top edge. */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 22px 19px;
+  border-left: 1px solid var(--border);
+  border-top: 4px solid #abcbb0;
+  box-shadow: none;
+}
+.project-card.gold {
+  border-left-color: var(--border);
+  border-top-color: #e5c56e;
+}
+.project-card.lavender {
+  border-left-color: var(--border);
+  border-top-color: #baa9df;
+}
+.project-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+.project-mark svg {
+  width: 25px;
+  height: 25px;
+}
+.project-card h3 {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.project-card p {
+  font-size: 12px;
+  margin-top: 5px;
+  min-height: 0;
+  white-space: nowrap;
+  flex-grow: 1; /* absorbs spare height so progress bars line up across a row */
+}
+.project-progress {
+  margin-top: 17px;
+}
+.progress-track {
+  height: 6px;
+}
+.project-count {
+  font-size: 11px;
+  margin-top: 7px;
+}
+.inner-page {
+  padding-top: 30px;
+}
+.all-projects-grid {
+  gap: 20px;
+}
+.all-projects-grid .project-card h3 {
+  font-size: 23px;
+}
+.all-projects-grid .project-card {
+  padding: 20px;
+}
+.all-projects-grid .project-progress {
+  margin-top: 25px;
+}
+.tools-grid {
+  max-width: none;
+}
+.page-heading h1 {
+  font-size: 34px;
+}
+.page-heading p {
+  font-size: 14px;
+}
+.project-detail-heading h1 {
+  font-size: 32px;
+}
+.project-detail-grid {
+  grid-template-columns: 1.2fr 1fr;
+}
+.tool-card h2 {
+  font-size: 26px;
+}
+.tool-card-main {
+  padding: 25px;
+}
+.tool-card p {
+  font-size: 14px;
+}
+.tool-mark {
+  width: 47px;
+  height: 47px;
+}
+.tool-card small {
+  font-size: 11px;
+}
+@media (min-width: 1500px) {
+  .main-nav button {
+    font-size: 15px;
+  }
+  .assistant-card .assistant-suggestions button {
+    font-size: 14px;
+  }
+  .assistant-card .assistant-composer textarea {
+    font-size: 16px;
+  }
+  .section-heading h2 {
+    font-size: 28px;
+  }
+  .section-heading p {
+    font-size: 14px;
+  }
+  .project-card p {
+    font-size: 14px;
+  }
+  .project-count {
+    font-size: 12px;
+  }
+  .app-main {
+    padding-top: 51px;
+    max-width: 1140px;
+  }
+  .header-inner {
+    max-width: 1140px;
+  }
+  .home-main > .assistant-card {
+    max-width: 998px;
+  }
+  .welcome-row h1 {
+    font-size: 46px;
+  }
+  .welcome-row {
+    margin-bottom: 37px;
+  }
+  .projects-section {
+    margin-top: 42px;
+  }
+  .project-card h3 {
+    font-size: 22px;
+  }
+  .project-card {
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
+  .project-mark {
+    width: 47px;
+    height: 47px;
+  }
+  .welcome-description {
+    font-size: 16px;
+  }
+  .welcome-date {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  .app-main {
+    max-width: 900px;
+    padding-top: 40px;
+  }
+  .header-inner {
+    padding: 0 30px;
+  }
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .home-main > .assistant-card {
+    max-width: none;
+  }
+  .project-card {
+    padding: 16px;
+  }
+  .project-card h3 {
+    font-size: 18px;
+  }
+  .project-card p {
+    font-size: 11px;
+  }
+  .project-card .project-top {
+    display: flex;
+  }
+  .project-open-icon {
+    display: block;
+  }
+  .section-heading h2 {
+    font-size: 24px;
+  }
+  .project-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .welcome-row h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 760px) {
+  .app-header {
+    height: 123px;
+  }
+  .header-inner {
+    height: 65px;
+    padding: 0 24px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .main-nav {
+    top: 72px;
+    width: calc(100% - 48px);
+  }
+  .main-nav button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+  .brand span {
+    font-size: 26px;
+  }
+  .app-main {
+    padding: 35px 24px 36px;
+    min-height: calc(100dvh - 123px);
+  }
+  .welcome-row {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .welcome-row h1 {
+    font-size: 32px;
+    max-width: 100%;
+    letter-spacing: -1.1px;
+  }
+  .welcome-description {
+    font-size: 13px;
+    max-width: 100%;
+    margin-top: 11px;
+  }
+  .welcome-date {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  .projects-section {
+    margin-top: 30px;
+  }
+  .project-card h3 {
+    font-size: 17px;
+  }
+  .project-card p {
+    font-size: 11px;
+    white-space: normal;
+    min-height: 30px;
+  }
+  .project-card {
+    padding: 15px 12px;
+  }
+  .project-mark {
+    width: 39px;
+    height: 39px;
+  }
+  .project-mark svg {
+    width: 23px;
+    height: 23px;
+  }
+  .project-grid {
+    gap: 12px;
+  }
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .inner-page {
+    padding-top: 27px;
+  }
+  .page-heading h1 {
+    font-size: 29px;
+  }
+  .page-heading p {
+    font-size: 13px;
+  }
+  .project-detail-heading h1 {
+    font-size: 28px;
+  }
+  .section-heading p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 0 20px;
+  }
+  .header-actions {
+    gap: 4px;
+  }
+  .header-actions .icon-button {
+    width: 30px;
+  }
+  .header-actions .avatar {
+    margin-left: 4px;
+  }
+  .main-nav {
+    width: calc(100% - 40px);
+  }
+  .app-main {
+    padding: 30px 20px 34px;
+  }
+  .welcome-row h1 {
+    font-size: 31px;
+    max-width: 315px;
+    margin: auto;
+    line-height: 1.25;
+  }
+  .welcome-description {
+    max-width: 280px;
+    margin: 12px auto 0;
+    line-height: 1.6;
+  }
+  .welcome-date {
+    font-size: 11px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    display: grid;
+    grid-template-columns: 43px 1fr;
+    column-gap: 14px;
+    padding: 17px;
+    border-top: 1px solid var(--border);
+    border-left: 4px solid #abcbb0;
+  }
+  .project-card.gold {
+    border-top-color: var(--border);
+    border-left-color: #e5c56e;
+  }
+  .project-card.lavender {
+    border-top-color: var(--border);
+    border-left-color: #baa9df;
+  }
+  .project-card .project-top {
+    grid-row: 1/4;
+  }
+  .project-card h3 {
+    font-size: 19px;
+    margin-top: 0;
+  }
+  .project-card p {
+    font-size: 12px;
+    min-height: 0;
+    margin-top: 3px;
+  }
+  .project-progress {
+    grid-column: 2;
+    margin-top: 12px;
+  }
+  .project-count {
+    grid-column: 2;
+    font-size: 10px;
+  }
+  .project-open-icon {
+    display: none;
+  }
+  .section-heading h2 {
+    font-size: 23px;
+  }
+  .section-heading > .text-button {
+    font-size: 11px;
+  }
+  .section-heading p {
+    font-size: 11px;
+    max-width: 220px;
+  }
+  .all-projects-grid .project-card {
+    display: block;
+  }
+  .all-projects-grid .project-card h3 {
+    margin-top: 15px;
+  }
+  .all-projects-grid .project-card p {
+    margin-top: 7px;
+  }
+  .project-detail-heading h1 {
+    font-size: 25px;
+  }
+  .page-heading h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .assistant-card .assistant-suggestions button {
+    font-size: 12px;
+    min-height: 44px;
+  }
+  .assistant-card .assistant-suggestions {
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .assistant-card .assistant-composer textarea {
+    min-height: 86px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .assistant-card .assistant-suggestions button {
+    font-size: 10px;
+    min-height: 59px;
+  }
+  .assistant-card .assistant-add-context {
+    font-size: 12px;
+    min-height: 35px;
+    padding: 7px 10px;
+  }
+  .assistant-card .assistant-send {
+    width: 37px;
+    height: 37px;
+  }
+  .assistant-card .assistant-composer-footer {
+    min-height: 40px;
+  }
+}
+
+/* Home hierarchy: the assistant leads, projects are a glance. Kept last and
+   scoped to Home so it wins over the breakpoint-specific sizes above. */
+.home-view .welcome-row {
+  margin-bottom: 24px;
+}
+.home-main .projects-section {
+  margin-top: 72px;
+}
+.home-main .section-heading {
+  margin-bottom: 14px;
+}
+.home-main .section-heading h2 {
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+/* A project's color lives only in its icon and progress bar — no stripe. */
+.home-main .project-card,
+.home-main .project-card.gold,
+.home-main .project-card.lavender {
+  border: 1px solid var(--border);
+}
+.home-main .progress-track {
+  height: 4px;
+}
+/* Glanceable: icon, name, progress. The description lives on the Projects page. */
+.home-main .project-card p {
+  display: none;
+}
+.home-main .project-card h3 {
+  flex-grow: 1; /* takes over from the hidden description to line up progress bars */
+  font-size: 18px;
+  letter-spacing: -0.4px;
+}
+.home-main .project-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+}
+.home-main .project-mark svg {
+  width: 20px;
+  height: 20px;
+}
+.home-main .project-progress {
+  margin-top: 14px;
+}
+/* No card around the assistant: the composer itself is the one raised surface. */
+.home-main > .assistant-card {
+  max-width: 720px; /* narrower than the projects grid, so it reads as the focal point */
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.home-main .assistant-card .assistant-composer {
+  border-color: #dedfd7;
+  border-radius: 16px;
+  padding: 16px 16px 14px 20px;
+  box-shadow:
+    0 1px 2px #292f290a,
+    0 10px 30px #292f2912;
+}
+.home-main .assistant-card .assistant-composer:focus-within {
+  border-color: #819a7b;
+  box-shadow:
+    0 0 0 3px #42634714,
+    0 10px 30px #292f2914;
+}
+/* Suggestions are shortcuts, not buttons: quiet pills under the composer. */
+.home-main .assistant-card .assistant-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.home-main .assistant-card .assistant-suggestions button {
+  flex-direction: row;
+  min-height: 34px;
+  padding: 0 14px;
+  gap: 7px;
+  border-color: #dedfd7;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 13px;
+}
+.home-main .assistant-card .assistant-suggestions button:hover:not(:disabled) {
+  border-color: #c9cfc1;
+  background: #fff;
+}
+.home-main .assistant-card .assistant-suggestions button svg {
+  width: 15px;
+  height: 15px;
+}
+@media (max-width: 760px) {
+  .home-view .welcome-row {
+    margin-bottom: 20px;
+  }
+  .home-main .projects-section {
+    margin-top: 48px;
+  }
+  .home-main .assistant-card .assistant-suggestions button {
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+}
