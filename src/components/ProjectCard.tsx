@@ -1,5 +1,8 @@
-import { Leaf, Sun, Pencil, ArrowUpRight } from "lucide-react";
+import { Leaf, Sun, Pencil, ArrowUpRight, ChevronRight } from "lucide-react";
 import type { Project, Task } from "../lib/types";
+
+const projectIcon = (color: Project["color"]) =>
+  color === "gold" ? Sun : color === "lavender" ? Pencil : Leaf;
 
 export function ProjectMark({
   color,
@@ -8,7 +11,7 @@ export function ProjectMark({
   color: Project["color"];
   small?: boolean;
 }) {
-  const Icon = color === "gold" ? Sun : color === "lavender" ? Pencil : Leaf;
+  const Icon = projectIcon(color);
   return (
     <span className={`project-mark ${color}${small ? " small" : ""}`}>
       <Icon strokeWidth={1.5} aria-hidden="true" />
@@ -45,6 +48,62 @@ export function ProjectCard({
       <span className="project-count">
         {completed} of {tasks.length} to-dos
       </span>
+    </button>
+  );
+}
+
+/** Compact home-screen row: what the project is, and the one thing to do next. */
+export function ProjectRow({
+  project,
+  tasks,
+  onClick,
+}: {
+  project: Project;
+  tasks: Task[];
+  onClick: () => void;
+}) {
+  const Icon = projectIcon(project.color);
+  const completed = tasks.filter((task) => task.completed).length;
+  const percent = tasks.length
+    ? Math.round((completed / tasks.length) * 100)
+    : 0;
+  const next = tasks
+    .filter((task) => !task.completed)
+    .sort((a, b) => a.date.localeCompare(b.date))[0];
+  return (
+    <button className={`project-row ${project.color}`} onClick={onClick}>
+      <Icon
+        className="project-row-icon"
+        size={20}
+        strokeWidth={1.5}
+        aria-hidden="true"
+      />
+      <span className="project-row-text">
+        <strong>{project.name}</strong>
+        <span>
+          {next
+            ? `Next: ${next.title}`
+            : tasks.length
+              ? "All done. Nice work."
+              : "No to-dos yet."}
+        </span>
+      </span>
+      <span className="project-row-progress">
+        <span className="progress-track" aria-hidden="true">
+          <span style={{ width: `${percent}%` }} />
+        </span>
+        <span aria-hidden="true">
+          {completed}/{tasks.length}
+        </span>
+        <span className="visually-hidden">
+          {completed} of {tasks.length} to-dos done
+        </span>
+      </span>
+      <ChevronRight
+        className="project-row-chevron"
+        size={18}
+        aria-hidden="true"
+      />
     </button>
   );
 }

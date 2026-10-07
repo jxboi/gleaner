@@ -1,6 +1,6 @@
 import { ArrowRight, Plus } from "lucide-react";
 import { Assistant } from "../components/Assistant";
-import { ProjectCard } from "../components/ProjectCard";
+import { ProjectRow } from "../components/ProjectCard";
 import type { WorkspaceProps } from "../lib/types";
 import { TODAY, formatWorkspaceDate } from "../lib/types";
 
@@ -28,19 +28,22 @@ export function Home(props: WorkspaceProps) {
                 New project
               </button>
             </div>
-            <div className="project-grid">
+            <ul className="project-list">
               {data.projects
                 .filter((p) => !p.archived)
                 .slice(0, 3)
                 .map((project) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    tasks={data.tasks.filter((t) => t.projectId === project.id)}
-                    onClick={() => navigate("project", project.id)}
-                  />
+                  <li key={project.id}>
+                    <ProjectRow
+                      project={project}
+                      tasks={data.tasks.filter(
+                        (t) => t.projectId === project.id,
+                      )}
+                      onClick={() => navigate("project", project.id)}
+                    />
+                  </li>
                 ))}
-            </div>
+            </ul>
             {data.projects.filter((p) => !p.archived).length > 3 && (
               <button
                 className="text-button more-projects"
