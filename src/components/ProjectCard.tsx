@@ -64,9 +64,6 @@ export function ProjectRow({
 }) {
   const Icon = projectIcon(project.color);
   const completed = tasks.filter((task) => task.completed).length;
-  const percent = tasks.length
-    ? Math.round((completed / tasks.length) * 100)
-    : 0;
   const next = tasks
     .filter((task) => !task.completed)
     .sort((a, b) => a.date.localeCompare(b.date))[0];
@@ -74,7 +71,7 @@ export function ProjectRow({
     <button className={`project-row ${project.color}`} onClick={onClick}>
       <Icon
         className="project-row-icon"
-        size={20}
+        size={18}
         strokeWidth={1.5}
         aria-hidden="true"
       />
@@ -89,9 +86,6 @@ export function ProjectRow({
         </span>
       </span>
       <span className="project-row-progress">
-        <span className="progress-track" aria-hidden="true">
-          <span style={{ width: `${percent}%` }} />
-        </span>
         <span aria-hidden="true">
           {completed}/{tasks.length}
         </span>

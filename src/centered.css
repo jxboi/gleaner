@@ -602,8 +602,8 @@
   align-items: center;
   gap: 14px;
   width: 100%;
-  min-height: 64px;
-  padding: 11px 10px;
+  min-height: 52px;
+  padding: 7px 10px;
   border: 0;
   border-radius: 10px;
   background: transparent;
@@ -653,19 +653,10 @@
   color: #6b7166;
 }
 .project-row-progress {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   flex-shrink: 0;
   font-size: 12px;
   color: #6b7166;
   font-variant-numeric: tabular-nums;
-}
-.project-row-progress .progress-track {
-  flex: none;
-  width: 56px;
-  height: 4px;
-  background: #e9eae4;
 }
 .project-row-chevron {
   flex-shrink: 0;
@@ -743,10 +734,6 @@
   }
   .project-row {
     gap: 12px;
-    padding: 10px;
-  }
-  .project-row-progress .progress-track {
-    display: none;
   }
   .home-main .assistant-card .assistant-suggestions button {
     min-height: 32px;
