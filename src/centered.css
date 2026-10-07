@@ -545,11 +545,13 @@
   letter-spacing: 0;
   color: #6b7166;
 }
-.home-main .section-heading > .text-button {
+.home-main .section-heading > .text-button,
+.home-main .more-projects {
   font-size: 13px;
   color: #6b7166;
 }
-.home-main .section-heading > .text-button:hover {
+.home-main .section-heading > .text-button:hover,
+.home-main .more-projects:hover {
   color: var(--green);
 }
 /* Projects on Home are compact rows: name, next step, progress. They sit on
